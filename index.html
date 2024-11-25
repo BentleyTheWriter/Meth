@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Problem</title>
+</head>
+<body>
+    <h1>Random Problem</h1>
+    <img id="problem-image" alt="Random Problem" style="max-width: 100%; height: auto;">
+
+    <script>
+        // Array of image URLs
+        const images = [
+            'https://media.discordapp.net/attachments/1309988346814140458/1310504127679299584/image1.jpg?ex=67457594&is=67442414&hm=d0f19b399dc7e7690a9b99b642c215cb2e57b16e6464213d87b8b825563b2819&',
+            'https://media.discordapp.net/attachments/1309988346814140458/1310504127427514418/image0.jpg?ex=67457593&is=67442413&hm=e01cebe106fd6c7fd27e491c7e528300a20eca44d5d5775b35b14fb2a7840aa0&',
+            'https://media.discordapp.net/attachments/1309988346814140458/1310504127918247946/image2.jpg?ex=67457594&is=67442414&hm=4a24c3a87f98c40319c56198c8180e3830732497aee8d786fa3be4ab4a9cfcbe&'
+        ];
+
+        // Function to get a random image
+        function getRandomImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            return images[randomIndex];
+        }
+
+        // Set the random image on page load
+        document.getElementById('problem-image').src = getRandomImage();
+    </script>
+</body>
+</html>
